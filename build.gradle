@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured-common
+    implementation group: 'io.rest-assured', name: 'rest-assured-common', version: '5.2.0'
+// https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.2.0'
+    // https://mvnrepository.com/artifact/io.rest-assured/json-path
+    testImplementation group: 'io.rest-assured', name: 'json-path', version: '5.2.0'
+// https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator
+    testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.2.0'
+// https://mvnrepository.com/artifact/io.rest-assured/rest-assured-all
+    implementation group: 'io.rest-assured', name: 'rest-assured-all', version: '5.2.0'
+// https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20220924'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.9.1'
+}
+
+test {
+    useJUnitPlatform()
+}
