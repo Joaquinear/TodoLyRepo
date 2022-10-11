@@ -24,7 +24,6 @@ public class PracticeApiItemIntoProject {
                     "tarea2JoaquinProjecto,item,3",
                     "tarea3JoaquinProjecto,item,4",
                     "tarea4JoaquinProjecto,item,5"
-
             }
     )
     public void addItemIntoProject(String nameProject,String nameItem,int icon){
