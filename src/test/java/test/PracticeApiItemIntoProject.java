@@ -4,6 +4,8 @@ import factoryRequest.FactoryRequest;
 import factoryRequest.RequestInfo;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import utils.ApiConfiguracion;
@@ -17,6 +19,8 @@ public class PracticeApiItemIntoProject {
     Response response;
     JSONObject body= new JSONObject();
     RequestInfo requestInfo = new RequestInfo();
+    @Order(1)
+    @DisplayName("Creacion de un projecto y se le agrega items al projecto creado")
     @ParameterizedTest
     @CsvSource(
             {
